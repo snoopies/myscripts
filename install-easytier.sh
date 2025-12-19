@@ -17,7 +17,7 @@ fi
 unzip -qo easytier-linux-x86_64-v2.2.4.zip
 cd easytier-linux-x86_64
 
-#nohup sudo ./easytier-core  --network-name default  --network-secret "$network_secret" -p wss://claw.now.cc:443 -i 10.1.1.100/24 --no-tun &
+nohup sudo ./easytier-core  --network-name default  --network-secret "$network_secret" -p wss://claw.now.cc:443 -i 10.1.1.100/24 --no-tun &
 
 sudo mkdir -p /etc/et
 
