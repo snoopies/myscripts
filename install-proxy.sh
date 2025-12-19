@@ -6,7 +6,7 @@ sudo apt install squid
 if [ ! -e "./squid.conf" ]; then
    cat> ./squid.conf<<EOF
       http_access allow all
-   EOF
+EOF
 fi
 
 sudo cp ./squid.conf /etc/squid/
