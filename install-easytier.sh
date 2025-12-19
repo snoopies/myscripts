@@ -19,8 +19,11 @@ cd easytier-linux-x86_64
 
 read -p "1.后台运行，2.作为服务运行，请输入选择 (1/2): " MODE_CHOICE
 
+#后台运行
 if [ "$MODE_CHOICE" = "1" ]; then
    nohup sudo ./easytier-core  --network-name default  --network-secret "$network_secret" -p wss://claw.now.cc:443 -i 10.1.1.100/24 --no-tun &
-else
+   exit 0
 fi
+
+
 
