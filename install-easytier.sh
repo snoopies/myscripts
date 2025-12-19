@@ -9,6 +9,10 @@ if [ ! command -v unzip >/dev/null 2>&1 ]; then
    sudo apt install -y unzip
 fi
 
+if [ ! -e "./easytier-linux-x86_64-v2.2.4.zip ]; then
+   wget 
+fi
+
 unzip -qo easytier-linux-x86_64-v2.2.4.zip
 cd easytier-linux-x86_64
 
