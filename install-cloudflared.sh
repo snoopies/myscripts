@@ -23,6 +23,7 @@ fi
 
 unzip -qo cloudflared-linux-amd64.zip
 chmod +x cloudflared-linux-amd64
+rm cloudflared-linux-amd64.zip
 
 read -p "1.后台运行，2.作为服务运行，请输入选择 (1/2): " MODE_CHOICE
 
