@@ -28,7 +28,7 @@ read -p "1.后台运行，2.作为服务运行，请输入选择 (1/2): " MODE_C
 if [ "$MODE_CHOICE" = "1" ]; then
    #run the tunnel manually in your current terminal session only:
    nohup cloudflared-linux-amd64 tunnel run --token "$my_cf_token" &
-else
-   #install a service to automatically run your tunnel whenever your machine starts:
-   sudo cloudflared-linux-amd64 service install "$my_cf_token"
+   exit 0  
 fi
+#install a service to automatically run your tunnel whenever your machine starts:
+sudo cloudflared-linux-amd64 service install "$my_cf_token"
