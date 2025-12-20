@@ -15,6 +15,6 @@ if [ ! -e "./squid.conf" ]; then
 #EOF
     wget https://raw.githubusercontent.com/snoopies/myscripts/refs/heads/main/squid.conf
 fi
-sudo cp ./squid.conf /etc/squid/
+sudo mv ./squid.conf /etc/squid/
 sudo systemctl restart squid
 
