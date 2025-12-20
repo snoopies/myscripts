@@ -22,7 +22,7 @@ if [ ! -e "./cloudflared-linux-amd64.zip" ]; then
 fi
 
 unzip -qo cloudflared-linux-amd64.zip
-cd cloudflared-linux-amd64
+chmod +x cloudflared-linux-amd64
 
 read -p "1.后台运行，2.作为服务运行，请输入选择 (1/2): " MODE_CHOICE
 
