@@ -30,5 +30,5 @@ if [ "$MODE_CHOICE" = "1" ]; then
    nohup cloudflared-linux-amd64 tunnel run --token "$my_cf_token" &
 else
    #install a service to automatically run your tunnel whenever your machine starts:
-   #sudo cloudflared-linux-amd64 service install "$my_cf_token"
+   sudo cloudflared-linux-amd64 service install "$my_cf_token"
 fi
