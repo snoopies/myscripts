@@ -1,5 +1,9 @@
 #!/bin/bash
 
+if [[ -z "$my_cf_token" ]]; then
+  echo "Please set 'my_cf_token'!"
+  exit 3
+fi
 
 ## Add cloudflare gpg key
 #sudo mkdir -p --mode=0755 /usr/share/keyrings
@@ -10,6 +14,8 @@
 
 ## install cloudflared
 #sudo apt-get update && sudo apt-get install cloudflared
+
+
 
 #run the tunnel manually in your current terminal session only:
 cloudflared tunnel run --token "$my_cf_token"
